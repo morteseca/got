@@ -1,4 +1,4 @@
-<?php
+го<?php
 
 namespace App\Http\Controllers;
 
@@ -20,4 +20,15 @@ class BaseController extends Controller
         $a = Product::find($id);
         return view('catalogdetailed',['a' => $a]);
     }
+}
+
+
+
+
+
+
+{
+ public function catalog(){
+ $b=Catalog::where('quantity','>',0)->get();
+ return view('catalog',compact('b'));
 }
